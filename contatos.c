@@ -44,13 +44,13 @@ void adicionarContato() {
 
     fgets(contatos[total_contatos].nome, TAM_NOME, stdin);
 
-    contatos[total_contatos].nome[strcspn(contatos[total_contatos].nome, "\n")] = '\0'; // Remove newline
+    contatos[total_contatos].nome[strcspn(contatos[total_contatos].nome, "\n")] = '\0';
  
     printf("Digite o telefone: ");
 
     fgets(contatos[total_contatos].telefone, TAM_TELEFONE, stdin);
 
-    contatos[total_contatos].telefone[strcspn(contatos[total_contatos].telefone, "\n")] = '\0'; // Remove newline
+    contatos[total_contatos].telefone[strcspn(contatos[total_contatos].telefone, "\n")] = '\0';
  
     total_contatos++;
 
@@ -90,8 +90,7 @@ void buscarContato() {
 
     fgets(nome, TAM_NOME, stdin);
 
-    nome[strcspn(nome, "\n")] = '\0'; // Remove newline
- 
+    nome[strcspn(nome, "\n")] = '\0';
     for (int i = 0; i < total_contatos; i++) {
 
         if (strcmp(contatos[i].nome, nome) == 0) {
@@ -120,7 +119,7 @@ void excluirContato() {
 
     fgets(nome, TAM_NOME, stdin);
 
-    nome[strcspn(nome, "\n")] = '\0'; // Remove newline
+    nome[strcspn(nome, "\n")] = '\0'; 
  
     for (int i = 0; i < total_contatos; i++) {
 
@@ -174,7 +173,7 @@ int main() {
 
         scanf("%d", &opcao);
 
-        limparEntrada(); // Limpa a entrada para evitar problemas com fgets
+        limparEntrada(); 
  
         switch (opcao) {
 
